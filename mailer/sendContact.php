@@ -89,7 +89,7 @@ require_once('PHPMailer/class.phpmailer.php');
 			";
 			
 require_once "../libs/recaptcha/recaptchalib.php";
-$secret = "6LelMp0UAAAAALoF1OD25JVMKqy5eub6mbNCqYK4";
+$secret = "my secret key";
 
 $reCaptcha = new ReCaptcha($secret);
 
