@@ -1,7 +1,11 @@
-body, p , a, h1, h3, ul, li {
+body, p , a, h1, h3, ul, li, span {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
+}
+
+label {
+  margin-bottom: 0;
 }
 
 li {
@@ -19,7 +23,8 @@ figure {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 0;
 }
 

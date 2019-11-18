@@ -1,3 +1,6 @@
+/* Nome da pasta para o BrowserSync */
+const folderName = 'template-theme-wp';
+
 // Adiciona os modulos instalados
 const gulp = require('gulp');
 const sass = require('gulp-sass');
@@ -22,7 +25,7 @@ function cleanCacheJs() {
 //Função para compilar o SASS e adicionar os prefixos
 function buildScss() {
   return gulp
-  .src('./src/scss/style.scss').pipe(autoprefixer({browsers: ['last 2 versions'],cascade: false}))
+  .src('./src/scss/style.scss').pipe(autoprefixer({cascade: false}))
   .pipe(sass({outputStyle: 'compressed'}))
   .on('error', notify.onError({title: "erro scss", message: "<%= error.message %>"}))
   .pipe(gulp.dest('./dist/css/'))
@@ -86,7 +89,7 @@ gulp.task('buildFonts', buildFonts)
 // Função para iniciar o browser
 function browser() {
   browserSync.init({
-    proxy: 'localhost/aldeota-locacao'
+    proxy: `localhost/${folderName}`
   })
 }
 // Tarefa para iniciar o browser-sync
